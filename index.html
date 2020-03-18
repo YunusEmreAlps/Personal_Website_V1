@@ -27,7 +27,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Yunus Emre Alpu</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./img/Asd.jpg" alt="Me"> 
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,12 +50,17 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
+        <li class="nav-item">
+         <select id="colorPicker" class="nav-link mx-auto bg-primary" onchange="changeColor()">
+           <option value="white" default>Light Mode</option>
+           <option value="black">Dark Mode</option>
+         </select>
+        </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid p-0">
-
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
         <h1 class="mb-0">Yunus Emre
@@ -151,10 +156,7 @@
             <i class="fab fa-bootstrap"></i>
           </li>
           <li class="list-inline-item">
-            <img src="./img/C.png" width="64"> 
-          </li>
-          <li class="list-inline-item">
-            <img src="https://img.icons8.com/nolan/64/sql.png">
+            <i class="fab fa-wordpress"></i>
           </li>
           <li class="list-inline-item">
             <i class="fab fa-java"></i>
@@ -163,16 +165,22 @@
             <i class="fab fa-python"></i>
           </li>
           <li class="list-inline-item">
-            <img src="./img/A.png" width="64"> 
+            <img src="./img/C.png" style="filter: grayscale(100%);" width="64" class="b"> 
           </li>
           <li class="list-inline-item">
-            <i class="fab fa-wordpress"></i>
+            <img src="./img/c-.png" style="filter: grayscale(100%);" width="64" class="b"> 
           </li>
           <li class="list-inline-item">
-            <img src="https://img.icons8.com/nolan/64/github.png">
+            <img src="./img/c-sharp.png" style="filter: grayscale(100%);" width="64" class="b"> 
           </li>
           <li class="list-inline-item">
-            <img src="https://img.icons8.com/nolan/64/c-plus-plus.png">
+            <img class="bc" src="./img/sql.png" style="filter: grayscale(100%);">
+          </li>
+          <li class="list-inline-item">
+            <img src="./img/A.png" width="64" style="filter: grayscale(100%);"> 
+          </li>
+          <li class="list-inline-item">
+            <img src="./img/github.png" style="filter: grayscale(100%);">
           </li>
         </ul>
 
@@ -215,6 +223,13 @@
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
 
-</body>
+  <!-- Dark mode -->
+  <script>
+    function changeColor(){
+      var bgclr = document.getElementById("colorPicker").value;
+      document.body.style.backgroundColor=bgclr; 
+    }
+  </script>
 
+</body>
 </html>
