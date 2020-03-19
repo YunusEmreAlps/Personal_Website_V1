@@ -8,6 +8,16 @@
      padding-top:54px;
      color:#868e96;
     }
+nav{
+    background-color: #1a1a1d;
+    color:rgb(154, 157, 160);
+}
+
+option {
+    background-color:transparent;
+    color:rgba(255,255,255,.5);
+}
+
     @media (min-width:992px){
         body{
             padding-top:0;

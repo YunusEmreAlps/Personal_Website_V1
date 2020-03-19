@@ -23,7 +23,7 @@
 
 <body id="page-top">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Yunus Emre Alpu</span>
       <span class="d-none d-lg-block">
@@ -50,10 +50,10 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
-        <li class="nav-item">
-         <select id="colorPicker" class="nav-link mx-auto bg-primary" onchange="changeColor()">
-           <option value="white" default>Light Mode</option>
-           <option value="black">Dark Mode</option>
+        <li class="nav-item bg-transparent">
+         <select id="colorPicker" class="nav-link mx-auto bg-transparent" onchange="bodyColor()">
+           <option class="nav-link text-dark" value="white" default>Light Mode</option>
+           <option class="nav-link text-dark" value="black">Dark Mode</option>
          </select>
         </li>
       </ul>
@@ -71,17 +71,20 @@
         </div>
         <p class="lead mb-5">I'm a software engineer and my third year at NE university. Technology has always been an interest in my life from the first generations iPhone .Today, I am interested in discovering any opportunities that are focused on business, web, robotic technologies, and artificial intelligence. Last Summer I went abroad for my language and my job. I want to be a good computer engineer and everyday improve myself.</p>
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/yunus-emre-alpu-5b1496151/">
+          <a href="https://www.linkedin.com/in/yunus-emre-alpu-5b1496151/" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/YunusEmreAlps">
+          <a href="https://github.com/YunusEmreAlps" data-toggle="tooltip" data-placement="bottom" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://medium.com/@yunus192alpu">
+          <a href="https://medium.com/@yunus192alpu" data-toggle="tooltip" data-placement="bottom" title="Medium">
             <i class="fab fa-medium"></i>
           </a>
-          <a href="https://www.instagram.com/yunusemrealpu/">
+          <a href="https://www.instagram.com/yunusemrealpu/" data-toggle="tooltip" data-placement="bottom" title="Instagram">
             <i class="fab fa-instagram"></i>
+          </a>
+          <a type="button" onclick="navColor()" data-toggle="tooltip" data-placement="bottom" title="Navbar Color">
+            <i class="fa fa-adjust"></i>
           </a>
         </div>
       </div>
@@ -224,11 +227,38 @@
   <script src="js/resume.min.js"></script>
 
   <!-- Dark mode -->
-  <script>
-    function changeColor(){
+  <script>  
+    function clickCounter(){
+      if(typeof(Storage) !== "undefined")
+      {
+        if(localStorage.counter){
+          localStorage.counter=Number(localStorage.counter)+1;
+          return localStorage.counter;
+        }
+        else{
+          localStorage.counter=1;
+          return localStorage.counter;
+        }
+      }
+    }
+    
+    function bodyColor(){
       var bgclr = document.getElementById("colorPicker").value;
       document.body.style.backgroundColor=bgclr; 
     }
+
+    function navColor(){
+      if((document.getElementById("colorPicker").value)=="white")
+      {
+        var wcolors = ["#1a1a1d","#e27D60","#182628"];
+        document.getElementById("sideNav").style.backgroundColor=wcolors[clickCounter()%(wcolors.length)];  
+      }
+      else if((document.getElementById("colorPicker").value)=="black"){
+        var dcolors = ["#1a1a1d","#ff4532","#379683"];
+        document.getElementById("sideNav").style.backgroundColor=dcolors[clickCounter()%(dcolors.length)];  
+      }
+    }
+
   </script>
 
 </body>
