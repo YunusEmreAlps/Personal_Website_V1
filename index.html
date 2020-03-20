@@ -58,14 +58,13 @@
         </li>
       </ul>
     </div>
+    
   </nav>
 
   <div class="container-fluid p-0">
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
-        <h1 class="mb-0">Yunus Emre
-          <span class="text-primary">Alpu</span>
-        </h1>
+        <h1 class="mb-0"><span class="animateyy">Yunus Emre <span class="text-primary">Alpu</span></span></h1>
         <div class="subheading mb-5">(90) 553-698-89-10
           <a href="mailto:yunus192alpu@gmail.com">yunus192alpu@gmail.com</a>
         </div>
@@ -101,7 +100,7 @@
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
           <div class="resume-content">
-            <h3 class="mb-0">Turk Telekom Summer Intern</h3>
+            <h3 class="mb-0" ><span>Turk Telekom Summer Intern</span></h3>
             <p>This is my first experience.I was worked in Python,Oracle database and Java to during my internship.Actually This job very important to my work experience because Turk Telekom is very important communication company.</p>
           </div>
           <div class="resume-date text-md-right">
@@ -231,6 +230,9 @@
 
   <!-- Changeable background and navigation bar -->
   <script>  
+    
+    nameAnimation();
+
     function clickCounter(){
       if(typeof(Storage) !== "undefined")
       {
@@ -262,7 +264,35 @@
       }
     }
 
-  </script>
+    function nameAnimation(){
+      const text = document.querySelector(".animateyy");
+      const mytext = text.textContent;
+      const sptext = mytext.split("");
+      text.textContent="";
+      
+      for(let i=0; i<sptext.length; i++){
+        text.innerHTML += "<span>" + sptext[i] + "</span>";
+      }
+      let chars=0; // character
+      let timer = setInterval(onTick, 50);
 
+      function onTick() {
+        const span = text.querySelectorAll('span')[chars];
+        span.classList.add('myfade');
+        console.log(span);
+        chars++
+        if(chars === sptext.length){
+          complete();
+          return;   
+        }
+      }
+
+      function complete() {
+        clearInterval(timer);
+        timer=null;
+      }
+    }
+
+  </script>
 </body>
 </html>

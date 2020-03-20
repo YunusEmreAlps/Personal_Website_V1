@@ -13,6 +13,16 @@ nav {
     color:rgb(154, 157, 160);
 }
 
+.animateyy span{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+span.myfade{
+    opacity: 1;
+    color:linear-gradient(90deg, rgba(26,26,29,1) 0%, rgba(189,93,56,1) 50%);
+}
+
 option {
     background-color:transparent;
     color:rgba(255,255,255,.5);
