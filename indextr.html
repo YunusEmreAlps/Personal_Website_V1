@@ -28,14 +28,16 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
       <!-- Language -->
-      <ul class="navbar-nav">
-        <li class="nav-item bg-transparent">
-          <select id="languagePicker" class="nav-link mx-auto bg-transparent" onchange="languageSelector()">
-            <option class="nav-link text-dark" lang="en" value="english" default>EN</option>
-            <option class="nav-link text-dark" lang="tr" value="turkish">TR</option>
-          </select>
-        </li>
-      </ul>
+      <div class="dropdown show">
+        <a class="btn bg-transparent border-secondary text-muted dropdown-toggle" style="font-weight: 800; letter-spacing: .05rem; text-transform: uppercase;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          DİL
+        </a>
+      
+        <div class="dropdown-menu" style="font-weight: 800; letter-spacing: .05rem; text-transform: uppercase;" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item text-dark" href="https://yunusemrealps.github.io/Personal-Website3/indextr.html"><img src="img/turkey-flag-button-round-icon-32.png"> TÜRKÇE</a>
+          <a class="dropdown-item text-dark" href="https://yunusemrealps.github.io/Personal-Website3/index.html"><img src="img/united-states-of-america-flag-button-round-icon-32.png"> İNGİLİZCE</a>
+        </div>
+      </div>
       <!-- Language -->
 
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -290,18 +292,6 @@
     <script>  
       setInterval(nameAnimation, 10000); // loop (10 seconds) 
       nameAnimation();
-
-      // Language Selector
-      function languageSelector(){
-        if((document.getElementById("languagePicker").value)=="english")
-        {
-         location.href = "https://yunusemrealps.github.io/Personal-Website3/index.html";
-        }
-        else if((document.getElementById("languagePicker").value)=="turkish"){
-          location.href = "https://yunusemrealps.github.io/Personal-Website3/indextr.html";
-        }
-      }
-
 
       function clickCounter(){
         if(typeof(Storage) !== "undefined")
