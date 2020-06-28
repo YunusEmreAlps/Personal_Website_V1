@@ -19,7 +19,8 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Custom styles for this template -->  
     <link href="css/resume.min.css" rel="stylesheet">
@@ -27,15 +28,15 @@
   <body id="page-top">
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
-      <!-- Language -->
-      <div class="dropdown show text-center">
-        <a class="btn bg-transparent border-secondary text-muted dropdown-toggle" style="font-weight: 500; letter-spacing: .05rem; text-transform: uppercase;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-globe"></i>
-        </a>
       
-        <div class="dropdown-menu dropdown-menu-center" style="font-weight: 800; letter-spacing: .05rem; text-transform: uppercase;" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item text-dark" href="https://yunusemrealps.github.io/Personal-Website3/index.html"><img src="img/united-states-of-america-flag-button-round-icon-32.png"> ENGLISH</a>
-          <a class="dropdown-item text-dark" href="https://yunusemrealps.github.io/Personal-Website3/indextr.html"><img src="img/turkey-flag-button-round-icon-32.png"> TURKISH</a>
+      <!-- Language -->
+      <div class="dropdown">
+        <a class="social-icons" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons">&#xe8e2;</i>
+        </a>
+        <div class="dropdown-menu text-center" id="langbtn" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" style="color:#bd5d38;" href="https://yunusemrealps.github.io/Personal-Website3/index.html">ENGLISH</a>
+          <a class="dropdown-item" style="color:#bd5d38;" href="https://yunusemrealps.github.io/Personal-Website3/indextr.html">TURKISH</a>
         </div>
       </div>
       <!-- Language -->
@@ -66,46 +67,67 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
-          <li class="nav-item bg-transparent">
+          <li class="nav-item mx-auto">
+            
+            <table class="table">
+              <thead>
+                <tr>
+                  <td scope="col"><i class="fa fa-sun-o" style="color:#bd5d38;"></i></td>
+                  <td scope="col" style="color:#bd5d38;">
+                    <div class="toggle-container">
+                      <input type="checkbox" id="switch" name="theme"/>
+                      <label class="text-left" for="switch">Toggle</label>
+                    </div>
+                  </td>
+                  <td scope="col"><i class="fa fa-moon-o" style="color:#bd5d38;"></i></td>
+                </tr>
+              </thead>
+            </table>
+          </li>
+          <!-- Dropdown theme mode -->
+          <!-- <li class="nav-item bg-transparent">
             <select id="colorPicker" class="nav-link mx-auto bg-transparent" onchange="bodyColor()">
               <option class="nav-link text-dark" value="white" default>Light Mode</option>
-              <option class="nav-link text-dark" value="black">Dark Mode</option>
+              <option class="nav-link text-dark" value="#121212">Dark Mode</option>
             </select>
-          </li>
+          </li>-->
+          <!-- Dropdown theme mode -->
         </ul>
       </div>
     </nav>
     <!-- Navigation bar -->
-
+    
     <div class="container-fluid p-0">
       <!-- About me -->
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
         <div class="w-100">
-          <h1 class="mb-0"><span class="animateyy">Yunus Emre <span class="text-primary">Alpu</span></span></h1>
-          <div class="subheading mb-5">(90) 553-698-89-10
-            <a href="mailto:yunus192alpu@gmail.com">yunus192alpu@gmail.com</a>
+          <h1 class="mb-0"><span class="animateyy">Yunus Emre <span>Alpu</span></span></h1>
+          <div class="subheading mb-5">
+            SOFTWARE ENGINEER &nbsp; / &nbsp; 
+            <a href="tel:+905536988910">CALL ME </a> &nbsp; / &nbsp; 
+            <a href="mailto:yunus192alpu@gmail.com">EMAIL ME</a> &nbsp; / &nbsp; 
+            <a href="./img/CV.pdf" download>DOWNLOAD MY CV</a>
           </div>
-          <p class="lead mb-5">I'm a software engineer and my third year at NE university. Technology has always been an interest in my life from the first generations iPhone .Today, I am interested in discovering any opportunities that are focused on Web, Robotic Technologies, Artificial Intelligence(AI) and Cloud computing. Last Summer I went abroad for my language and my job. I want to be a good computer engineer and everyday improve myself.</p>
+          <p class="lead mb-5">I solve problems in creative ways. At Konya NEU, where I am completing my junior year in the College of Engineering, I have learned the importance of applying classical strategies to modern-day projects.Software engineering is never ending puzzle that I am passionately in solving. This passion carried me through my education purdue.First, I learned C then C++. I studied new languages, algorithms, compilers, higher mathematics, all with pretty much the same fascination.<br/>
+          So, now, in industry, this passion remains with me. There's certainly yet more to learn, yet more problems, and yet more to build.
+          </p>
           <div class="social-icons">
-            <a href="https://yunusemrealpuu.herokuapp.com/" data-toggle="tooltip" data-placement="bottom" title="My Design">
+            <a href="https://yunusemrealpuu.herokuapp.com/" id="blog" data-toggle="tooltip" data-placement="bottom" title="Blog">
               <i class="fas fa-blog"></i>
             </a>
-            <a href="https://www.linkedin.com/in/yunus-emre-alpu-5b1496151/" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/yunus-emre-alpu-5b1496151/" id="linkedin" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/YunusEmreAlps" data-toggle="tooltip" data-placement="bottom" title="GitHub">
+            <a href="https://github.com/YunusEmreAlps" id="github" data-toggle="tooltip" data-placement="bottom" title="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://medium.com/@yunus192alpu" data-toggle="tooltip" data-placement="bottom" title="Medium">
+            <a href="https://medium.com/@yunus192alpu" id="medium" data-toggle="tooltip" data-placement="bottom" title="Medium">
               <i class="fab fa-medium"></i>
             </a>
-            <a href="https://www.instagram.com/yunusemrealpu/" data-toggle="tooltip" data-placement="bottom" title="Instagram">
+            <a href="https://www.instagram.com/yunusemrealpu/" id="instagram"  data-toggle="tooltip" data-placement="bottom" title="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="./img/CV.pdf" data-toggle="tooltip" data-placement="bottom" title="Download my CV" download>
-              <i class="fa fa-download"></i>
-            </a>
-            <a  onclick="navColor()" data-toggle="tooltip" data-placement="bottom" title="Navbar Color">
+            <a  onclick="navColor2()" data-toggle="tooltip" data-placement="bottom" title="Navbar Color">
               <i class="fa fa-adjust"></i>
             </a>
           </div>
@@ -122,8 +144,9 @@
           <h2 class="mb-5">Experience</h2>
           <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
             <div class="resume-content">
-              <h3 class="mb-0" ><span>Turk Telekom Summer Intern</span></h3>
-              <p>This is my first experience.I was worked in Python,Oracle database and Java to during my internship.Actually This job very important to my work experience because Turk Telekom is very important communication company.</p>
+              <h3 class="mb-0" ><span>Turk Telekom</span></h3>
+              <div class="subheading mb-3">Internship</div>
+              <p>I worked on the Arista AI project. Arista is a problem detector software. If you have an internet connection problem Arista solves this problem. I was worked on the UI and AI parts and  I did use HTML5, CSS3, JavaScript, Python, Oracle database during my internship.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">2019 July -2019 August (2 Months)</span>
@@ -143,9 +166,9 @@
           <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="resume-content">
               <h3 class="mb-0">University of Necmettin Erbakan</h3>
-              <div class="subheading mb-3">Bachelor of Science</div>
-              <div>Computer Science</div>
-              <p>GPA: 2.77</p>
+              <div class="subheading mb-3">Bachelor of Engineering</div>
+              <div>Computer Science and Engineering</div>
+              <p>GPA: 2.77 / 4</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">August 2017 - Present</span>
@@ -154,7 +177,7 @@
           <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
             <div class="resume-content">
               <h3 class="mb-0">Mehmet-Hanife Yapıcı Anatolian High School</h3>
-              <p>GPA: 3.50</p>
+              <p>GPA: 3.50 / 4</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">August 2013 - May 2017</span>
@@ -173,67 +196,363 @@
           <h2 class="mb-5">Skills</h2>
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline dev-icons">
+            <!-- HTML 5 -->
             <li class="list-inline-item">
-              <i class="fab fa-html5"></i>
+              <!-- Progress bar 1 -->
+              <div class="progress mx-auto" data-value='90' data-toggle="tooltip" data-placement="bottom" title="%90" onclick="document.getElementById('id01').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    
+                    <i class="fab fa-html5"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id01" onclick="document.getElementById('id01').style.display='none'">
+                <div id="ovtext">HTML -> %90</div>
+              </div>
             </li>
+            <!-- HTML 5 --> 
+            <!-- CSS3 --> 
             <li class="list-inline-item">
-              <i class="fab fa-css3-alt"></i>
+              <!-- Progress bar 2 -->
+              <div class="progress mx-auto" data-value='90' data-toggle="tooltip" data-placement="bottom" title="%90" onclick="document.getElementById('id02').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fab fa-css3-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id02" onclick="document.getElementById('id02').style.display='none'">
+                <div id="ovtext">CSS -> %90</div>
+              </div>
             </li>
+            <!-- CSS 3-->
+            <!-- JAVASCRIPT --> 
             <li class="list-inline-item">
-              <i class="fab fa-bootstrap"></i>
+              <!-- Progress bar 3 -->
+              <div class="progress mx-auto" data-value='40' data-toggle="tooltip" data-placement="bottom" title="%40" onclick="document.getElementById('id03').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-danger"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-danger"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fab fa-js"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id03" onclick="document.getElementById('id03').style.display='none'">
+                <div id="ovtext">JAVASCRIPT -> %40</div>
+              </div>
             </li>
+            <!-- JAVASCRIPT -->
+            <!-- PHP  --> 
             <li class="list-inline-item">
-              <i class="fab fa-js"></i>
+              <!-- Progress bar 4 -->
+              <div class="progress mx-auto" data-value='70' data-toggle="tooltip" data-placement="bottom" title="%70" onclick="document.getElementById('id04').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fab fa-php"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id04" onclick="document.getElementById('id04').style.display='none'">
+                <div id="ovtext">PHP -> %70</div>
+              </div>
             </li>
+            <!-- PHP -->
+            <!-- DATABASE --> 
             <li class="list-inline-item">
-              <i class="fab fa-php"></i>
+              <!-- Progress bar 5 -->
+              <div class="progress mx-auto" data-value='80' data-toggle="tooltip" data-placement="bottom" title="%80" onclick="document.getElementById('id05').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fas fa-database"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id05" onclick="document.getElementById('id05').style.display='none'">
+                <div id="ovtext">SQL AND PL/SQL -> %80</div>
+              </div>
             </li>
+            <!-- DATABASE -->     
+            <!-- JAVA --> 
             <li class="list-inline-item">
-              <i class="fab fa-java"></i>
+              <!-- Progress bar 6 -->
+              <div class="progress mx-auto" data-value='70' data-toggle="tooltip" data-placement="bottom" title="%70" onclick="document.getElementById('id06').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fab fa-java"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id06" onclick="document.getElementById('id06').style.display='none'">
+                <div id="ovtext">JAVA -> %70</div>
+              </div>
             </li>
+            <!-- JAVA -->
+            <!-- PYTHON --> 
             <li class="list-inline-item">
-              <i class="fab fa-python"></i>
+              <!-- Progress bar 7 -->
+              <div class="progress mx-auto" data-value='60' data-toggle="tooltip" data-placement="bottom" title="%60" onclick="document.getElementById('id07').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fab fa-python"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id07" onclick="document.getElementById('id07').style.display='none'">
+                <div id="ovtext">PYTHON -> %60</div>
+              </div>
             </li>
+            <!-- PYTHON -->
+            <!-- C --> 
             <li class="list-inline-item">
-              <i class="fab fa-cuttlefish"></i>
+              <!-- Progress bar 8 -->
+              <div class="progress mx-auto" data-value='90' data-toggle="tooltip" data-placement="bottom" title="%90" onclick="document.getElementById('id08').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                      width="50" height="50"
+                      viewBox="0 0 172 172"
+                      style=" fill:#000000;"><g xmlns="http://www.w3.org/2000/svg" font-family="none" font-size="none" font-weight="none" style="mix-blend-mode: normal" fill="none" fill-rule="nonzero" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" text-anchor="none">
+                        <path fill="none" d="M 0 172 v -172 h 172 v 172 Z" /><g fill="#95a5a6">
+                        <path d="M 127.531 113.52 c -1.51704 0 -2.79672 1.01136 -3.28864 2.44584 c -4.80912 13.9354 -18.2595 21.6342 -35.5765 21.6342 c -25.2393 0 -40.506 -19.0782 -40.506 -51.6516 c 0 -32.4702 15.2667 -51.5484 40.4028 -51.5484 c 17.7194 0 31.4622 9.21576 35.9824 24.9194 c 0.43688 1.5136 1.7544 2.60064 3.32648 2.60064 c 0 0 19.0404 0.01032 25.2083 0 c 1.03544 -0.00344 1.84384 -0.91848 1.70968 -1.9436 c -4.03168 -30.8362 -31.7168 -53.0964 -66.2269 -53.0964 c -44.0182 0 -71.3628 30.3374 -71.3628 79.1716 c 0 48.7689 27.3858 79.0684 71.466 79.0684 c 34.6339 0 61.146 -19.9004 66.1168 -49.5842 c 0.17544 -1.04576 -0.64328 -2.0124 -1.70624 -2.01584 Z" /></g></g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id08" onclick="document.getElementById('id08').style.display='none'">
+                <div id="ovtext">C -> %90</div>
+              </div>
             </li>
+            <!-- C -->    
+            <!-- C++ --> 
             <li class="list-inline-item">
-              <i class="fab fa-cuttlefish"><i style="font-size:32px;">++</i></i>
+              <!-- Progress bar 9 -->
+              <div class="progress mx-auto" data-value='40' data-toggle="tooltip" data-placement="bottom" title="%40" onclick="document.getElementById('id09').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-danger"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-danger"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                      width="50" height="50"
+                      viewBox="0 0 172 172"
+                      style=" fill:#000000;"><g xmlns="http://www.w3.org/2000/svg" transform=""><g font-family="none" font-size="none" font-weight="none" style="mix-blend-mode: normal" fill="none" fill-rule="nonzero" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" text-anchor="none">
+                      <path fill="none" d="M 0 172 v -172 h 172 v 172 Z" /><path fill="none" d="" /><path fill="none" d="" /><g fill="#95a5a6">
+                      <path d="M 151.051 41.2934 l -57.9293 -32.5591 c -4.39391 -2.45905 -9.84975 -2.45905 -14.2437 0 l -57.9291 32.5591 c -4.43437 2.48609 -7.18905 7.14866 -7.18905 12.1477 v 65.1178 c 0 4.99901 2.75468 9.66158 7.18905 12.1477 l 57.9291 32.5589 c 2.20366 1.23634 4.66292 1.8545 7.12183 1.8545 c 2.45891 0 4.91817 -0.61817 7.12183 -1.8545 l 57.9293 -32.5589 c 4.43416 -2.48609 7.18891 -7.14866 7.18891 -12.1477 v -65.1178 c 0 -4.99901 -2.75475 -9.66158 -7.18891 -12.1477 Z M 86 127.28 c -22.7632 0 -41.28 -18.5168 -41.28 -41.28 c 0 -22.7632 18.5168 -41.28 41.28 -41.28 c 13.0077 0 25.0205 6.03342 32.8279 16.3132 l -15.0768 8.72074 c -4.52842 -4.95842 -10.965 -7.83391 -17.7511 -7.83391 c -13.2763 0 -24.08 10.8037 -24.08 24.08 c 0 13.2763 10.8037 24.08 24.08 24.08 c 6.78609 0 13.2227 -2.8755 17.7511 -7.83391 l 15.0768 8.72074 c -7.80742 10.2797 -19.8202 16.3132 -32.8279 16.3132 Z M 127.28 89.44 h -6.88 v 6.88 h -6.88 v -6.88 h -6.88 v -6.88 h 6.88 v -6.88 h 6.88 v 6.88 h 6.88 Z M 151.36 89.44 h -6.88 v 6.88 h -6.88 v -6.88 h -6.88 v -6.88 h 6.88 v -6.88 h 6.88 v 6.88 h 6.88 Z" /></g></g></g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id09" onclick="document.getElementById('id09').style.display='none'">
+                <div id="ovtext">C++ -> %40</div>
+              </div>
             </li>
+            <!-- C++ -->   
+            <!-- C# --> 
             <li class="list-inline-item">
-              <i class="fas fa-database"></i>
+              <!-- Progress bar 10 -->
+              <div class="progress mx-auto" data-value='60' data-toggle="tooltip" data-placement="bottom" title="%60" onclick="document.getElementById('id10').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                      width="50" height="50"
+                      viewBox="0 0 172 172"
+                      style=" fill:#000000;"><g xmlns="http://www.w3.org/2000/svg" font-family="none" font-size="none" font-weight="none" style="mix-blend-mode: normal" fill="none" fill-rule="none" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" text-anchor="none">
+                        <path fill="none" fill-rule="nonzero" d="M 0 172 v -172 h 172 v 172 Z" /><g fill-rule="evenodd">
+                        <path fill="#95a5a6" d="M 82.0691 11.7748 c 2.43308 -1.36525 5.42875 -1.36525 7.85825 0 c 12.0221 6.74742 48.1994 27.0578 60.2251 33.8052 c 2.43308 1.36167 3.93092 3.88433 3.93092 6.61483 c 0 13.4948 0 54.1119 0 67.6068 c 0 2.7305 -1.49783 5.25317 -3.93092 6.61842 c -12.0221 6.74742 -48.1994 27.0578 -60.2251 33.8052 c -2.43308 1.36525 -5.42875 1.36525 -7.85825 0 c -12.0221 -6.74742 -48.1994 -27.0578 -60.2251 -33.8052 c -2.4295 -1.36525 -3.92733 -3.88433 -3.92733 -6.61483 c 0 -13.4948 0 -54.1119 0 -67.6068 c 0 -2.7305 1.49783 -5.25317 3.93092 -6.61842 c 12.0185 -6.74742 48.203 -27.0578 60.2215 -33.8052 Z" /><path fill="#95a5a6" d="M 19.006 123.281 c -0.95317 -1.27567 -1.08933 -2.48683 -1.08933 -4.11725 c 0 -13.416 0 -53.8002 0 -67.2197 c 0 -2.71617 1.49425 -5.2245 3.92017 -6.579 c 11.9791 -6.708 48.0346 -26.9001 60.0137 -33.6117 c 2.42592 -1.35808 5.71183 -1.32942 8.13775 0.02867 c 11.9791 6.708 47.9128 26.7281 59.8918 33.4361 c 0.9675 0.54467 1.70567 1.20042 2.365 2.064 Z" /><path fill="#ffffff" d="M 86 35.8333 c 27.6884 0 50.1667 22.4783 50.1667 50.1667 c 0 27.6884 -22.4783 50.1667 -50.1667 50.1667 c -27.6884 0 -50.1667 -22.4783 -50.1667 -50.1667 c 0 -27.6884 22.4783 -50.1667 50.1667 -50.1667 Z M 86 60.9167 c 13.8424 0 25.0833 11.2373 25.0833 25.0833 c 0 13.8424 -11.2409 25.0833 -25.0833 25.0833 c -13.8424 0 -25.0833 -11.2409 -25.0833 -25.0833 c 0 -13.846 11.2373 -25.0833 25.0833 -25.0833 Z" /><path fill="#95a5a6" d="M 152.238 47.3179 c 1.849 1.73075 1.81317 4.33942 1.81317 6.39267 c 0 13.5988 -0.11467 52.2772 0.03225 65.876 c 0.01433 1.419 -0.45508 2.91325 -1.15742 4.03842 l -68.3843 -37.625 Z" /><path fill="#ffffff" d="M 121.833 71.6667 h 3.58333 v 28.6667 h -3.58333 Z M 132.583 71.6667 h 3.58333 v 28.6667 h -3.58333 Z" /><path fill="#ffffff" d="M 114.667 89.5833 h 28.6667 v 3.58333 h -28.6667 Z M 114.667 78.8333 h 28.6667 v 3.58333 h -28.6667 Z" /></g></g></svg>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id10" onclick="document.getElementById('id10').style.display='none'">
+                <div id="ovtext">C# -> %60</div>
+              </div>
             </li>
+            <!-- C# -->
+            <!-- Boostrap --> 
+             <li class="list-inline-item">
+              <!-- Progress bar 11 -->
+              <div class="progress mx-auto" data-value='95' data-toggle="tooltip" data-placement="bottom" title="%95" onclick="document.getElementById('id11').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fab fa-bootstrap"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id11" onclick="document.getElementById('id11').style.display='none'">
+                <div id="ovtext">BOOTSTRAP -> %95</div>
+              </div>
+            </li>
+            <!-- Boostrap -->
+            <!-- Wordpress --> 
+             <li class="list-inline-item">
+              <!-- Progress bar 12 -->
+              <div class="progress mx-auto" data-value='80' data-toggle="tooltip" data-placement="bottom" title="%80" onclick="document.getElementById('id12').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fab fa-wordpress"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id12" onclick="document.getElementById('id12').style.display='none'">
+                <div id="ovtext">WORDPRESS -> %80</div>
+              </div>
+            </li>
+            <!-- Wordpress -->
+            <!-- GitHub --> 
             <li class="list-inline-item">
-              <i class="fab fa-wordpress"></i>
+              <!-- Progress bar 13 -->
+              <div class="progress mx-auto" data-value='75' data-toggle="tooltip" data-placement="bottom" title="%75" onclick="document.getElementById('id13').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div style="font-size: 50px;">
+                    <i class="fab fa-github"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id13" onclick="document.getElementById('id13').style.display='none'">
+                <div id="ovtext">GITHUB -> %75</div>
+              </div>
             </li>
+            <!-- GitHub -->
+            <!-- Heroku --> 
             <li class="list-inline-item">
-              <i class="fab fa-github"></i>
+              <!-- Progress bar 14 -->
+              <div class="progress mx-auto" data-value='60' data-toggle="tooltip" data-placement="bottom" title="%60" onclick="document.getElementById('id14').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-warning"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                      width="50" height="50"
+                      viewBox="0 0 172 172"
+                      style=" fill:#000000;"><g xmlns="http://www.w3.org/2000/svg" font-family="none" font-size="none" font-weight="none" style="mix-blend-mode: normal" fill="none" fill-rule="nonzero" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" text-anchor="none">
+                      <path fill="none" d="M 0 172 v -172 h 172 v 172 Z" /><g fill="#95a5a6">
+                      <path d="M 121.833 21.5 h -71.6667 c -7.89451 0 -14.3333 6.43882 -14.3333 14.3333 v 100.333 c 0 7.8948 6.43882 14.3333 14.3333 14.3333 h 71.6667 c 7.8948 0 14.3333 -6.43853 14.3333 -14.3333 v -100.333 c 0 -7.89451 -6.43853 -14.3333 -14.3333 -14.3333 Z M 57.3333 129 v -21.5 l 14.3333 10.75 Z M 114.667 129 h -14.3333 c 0 0 0 -22.2281 0 -36.029 c 0 -4.11582 -3.8915 -15.7896 -42.916 0.19565 c -0.08399 0.25227 -0.08399 -50.0546 -0.08399 -50.0546 l 14.3333 -0.11201 v 31.2983 c 0 0 43 -12.5698 43 18.8684 Z M 107.556 57.3333 c -4.31075 0 -12.2335 0 -14.3892 0 c 4.53507 -6.91469 8.09045 -14.3333 8.09045 -14.3333 h 13.4934 c 0 0 -1.84757 5.93493 -7.19462 14.3333 Z" /></g></g></svg>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id14" onclick="document.getElementById('id14').style.display='none'">
+                <div id="ovtext">HEROKU -> %60</div>
+              </div>
             </li>
+            <!-- Heroku -->
+            <!-- AWS --> 
             <li class="list-inline-item">
-              <i class="fa fa-windows"></i>
+              <!-- Progress bar 15 -->
+              <div class="progress mx-auto" data-value='20' data-toggle="tooltip" data-placement="bottom" title="%20" onclick="document.getElementById('id15').style.display='block'">
+                <span class="progress-left">
+                  <span class="progress-bar border-danger"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar border-danger"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="50" height="50"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g xmlns="http://www.w3.org/2000/svg" font-family="none" font-size="none" font-weight="none" style="mix-blend-mode: normal" fill="none" fill-rule="nonzero" stroke="none" stroke-dasharray="" stroke-dashoffset="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-width="1" text-anchor="none"><path fill="none" d="M 0 172 v -172 h 172 v 172 Z" /><g><path fill="#95a5a6" d="M 48.4717 77.1456 c 0 2.13925 0.22933 3.87 0.63067 5.14208 c 0.45867 1.27208 1.02842 2.65883 1.83108 4.16025 c 0.28667 0.46225 0.40133 0.9245 0.40133 1.32942 c 0 0.57692 -0.344 1.15383 -1.08575 1.73433 l -3.60483 2.42592 c -0.516 0.34758 -1.02842 0.51958 -1.48708 0.51958 c -0.57333 0 -1.14308 -0.29025 -1.71642 -0.80983 c -0.80267 -0.86717 -1.48708 -1.79167 -2.06042 -2.71617 c -0.57333 -0.98183 -1.14308 -2.07833 -1.77375 -3.40775 c -4.46125 5.31408 -10.0692 7.97292 -16.8202 7.97292 c -4.80525 0 -8.63942 -1.38675 -11.4416 -4.16025 c -2.80217 -2.7735 -4.23192 -6.4715 -4.23192 -11.094 c 0 -4.90917 1.71642 -8.89742 5.20658 -11.9003 c 3.49017 -3.00283 8.12342 -4.50783 14.0144 -4.50783 c 1.94575 0 3.94883 0.172 6.063 0.46225 c 2.11417 0.29025 4.28925 0.7525 6.579 1.27208 v -4.21758 c 0 -4.38958 -0.91375 -7.45333 -2.6875 -9.245 c -1.83108 -1.79167 -4.91992 -2.65883 -9.32383 -2.65883 c -2.00308 0 -4.05992 0.22933 -6.17767 0.7525 c -2.11775 0.51958 -4.17458 1.15383 -6.17767 1.96367 c -0.91375 0.40492 -1.60175 0.63425 -2.00308 0.7525 c -0.40133 0.11467 -0.688 0.172 -0.91375 0.172 c -0.80267 0 -1.20042 -0.57692 -1.20042 -1.79167 v -2.83083 c 0 -0.9245 0.11467 -1.61608 0.40133 -2.021 c 0.28667 -0.40492 0.80267 -0.80983 1.60175 -1.21475 c 2.00308 -1.03917 4.40392 -1.90633 7.20967 -2.6015 c 2.80217 -0.7525 5.77633 -1.0965 8.9225 -1.0965 c 6.80833 0 11.7856 1.55875 14.9891 4.67983 c 3.14617 3.12108 4.74792 7.85825 4.74792 14.2115 v 18.7193 h 0.1075 Z M 25.2446 85.9248 c 1.88842 0 3.83417 -0.34758 5.891 -1.03917 c 2.06042 -0.69158 3.8915 -1.96367 5.43592 -3.698 c 0.91375 -1.0965 1.60175 -2.31125 1.94575 -3.698 c 0.344 -1.38675 0.57333 -3.06375 0.57333 -5.02742 v -2.42592 c -1.65908 -0.40492 -3.43283 -0.7525 -5.26392 -0.98183 c -1.83108 -0.22933 -3.60483 -0.34758 -5.37858 -0.34758 c -3.83417 0 -6.63633 0.7525 -8.52475 2.31125 c -1.88842 1.55875 -2.80217 3.75533 -2.80217 6.6435 c 0 2.71617 0.688 4.73717 2.11775 6.12392 c 1.37242 1.44767 3.3755 2.13925 6.00567 2.13925 Z M 71.1829 92.1669 c -1.02842 0 -1.71642 -0.172 -2.17508 -0.57692 c -0.45867 -0.34758 -0.85642 -1.15383 -1.20042 -2.25392 l -13.4447 -44.6591 c -0.344 -1.15383 -0.516 -1.90633 -0.516 -2.31125 c 0 -0.9245 0.45867 -1.44408 1.37242 -1.44408 h 5.60792 c 1.08575 0 1.83108 0.172 2.23242 0.57692 c 0.45867 0.34758 0.79908 1.15383 1.14308 2.25392 l 9.6105 38.2485 l 8.9225 -38.2485 c 0.28667 -1.15383 0.63067 -1.90633 1.08575 -2.25392 c 0.45867 -0.34758 1.25775 -0.57692 2.28975 -0.57692 h 4.57592 c 1.08575 0 1.83108 0.172 2.28975 0.57692 c 0.45867 0.34758 0.85642 1.15383 1.08575 2.25392 l 9.03717 38.7108 l 9.89717 -38.7108 c 0.344 -1.15383 0.74533 -1.90633 1.14308 -2.25392 c 0.45867 -0.34758 1.20042 -0.57692 2.23242 -0.57692 h 5.32125 c 0.91375 0 1.42975 0.46225 1.42975 1.44408 c 0 0.29025 -0.05733 0.57692 -0.11467 0.9245 c -0.05733 0.34758 -0.172 0.80983 -0.40133 1.44408 l -13.7851 44.6591 c -0.344 1.15383 -0.74533 1.90633 -1.20042 2.25392 c -0.45508 0.34758 -1.20042 0.57692 -2.17508 0.57692 h -4.91992 c -1.08575 0 -1.83108 -0.172 -2.28975 -0.57692 c -0.45867 -0.40492 -0.85642 -1.15383 -1.08575 -2.31125 l -8.86517 -37.2667 l -8.80783 37.2093 c -0.28667 1.15383 -0.63067 1.90633 -1.08575 2.31125 c -0.45867 0.40492 -1.25775 0.57692 -2.28975 0.57692 Z M 144.691 93.7257 c -2.97417 0 -5.94833 -0.34758 -8.80783 -1.03917 c -2.8595 -0.69158 -5.09192 -1.44408 -6.579 -2.31125 c -0.91375 -0.51958 -1.54442 -1.0965 -1.77375 -1.61608 c -0.22933 -0.51958 -0.344 -1.0965 -0.344 -1.61608 v -2.9455 c 0 -1.21475 0.45867 -1.79167 1.31508 -1.79167 c 0.344 0 0.688 0.05733 1.02842 0.172 c 0.344 0.11467 0.85642 0.34758 1.42975 0.57692 c 1.94575 0.86717 4.05992 1.55875 6.29233 2.021 c 2.28975 0.46225 4.51858 0.69158 6.80833 0.69158 c 3.60483 0 6.407 -0.63425 8.35275 -1.90633 c 1.94575 -1.27208 2.97417 -3.12108 2.97417 -5.48967 c 0 -1.61608 -0.516 -2.9455 -1.54442 -4.04558 c -1.02842 -1.0965 -2.97417 -2.07833 -5.77633 -3.00283 l -8.29542 -2.6015 c -4.17458 -1.32942 -7.26342 -3.29308 -9.15183 -5.89458 c -1.88842 -2.54058 -2.8595 -5.37142 -2.8595 -8.37783 c 0 -2.42592 0.516 -4.56517 1.54442 -6.41417 c 1.02842 -1.849 2.40442 -3.46508 4.11725 -4.73717 c 1.71642 -1.32942 3.66217 -2.31125 5.94833 -3.00283 c 2.28975 -0.688 4.69058 -0.97825 7.20967 -0.97825 c 1.25775 0 2.57283 0.05733 3.83417 0.22933 c 1.31508 0.172 2.5155 0.40492 3.7195 0.63425 c 1.14308 0.29025 2.23242 0.57692 3.26083 0.9245 c 1.02842 0.34758 1.83108 0.69158 2.40442 1.03917 c 0.80267 0.46225 1.37242 0.9245 1.71642 1.44408 c 0.344 0.46225 0.516 1.0965 0.516 1.90633 v 2.71617 c 0 1.21475 -0.45867 1.849 -1.31508 1.849 c -0.45867 0 -1.20042 -0.22933 -2.17508 -0.69158 c -3.26083 -1.50142 -6.923 -2.25392 -10.9829 -2.25392 c -3.26083 0 -5.83367 0.51958 -7.60742 1.61608 c -1.77375 1.0965 -2.6875 2.7735 -2.6875 5.14208 c 0 1.61608 0.57333 3.00283 1.71642 4.10292 c 1.14308 1.0965 3.26083 2.19658 6.29233 3.17842 l 8.12342 2.6015 c 4.11725 1.32942 7.095 3.17842 8.86517 5.547 c 1.77017 2.36858 2.63017 5.08475 2.63017 8.08758 c 0 2.48325 -0.516 4.73717 -1.48708 6.70083 c -1.02842 1.96367 -2.40442 3.698 -4.17458 5.08475 c -1.77375 1.44408 -3.8915 2.48325 -6.34967 3.23575 c -2.58358 0.80983 -5.27108 1.21475 -8.18792 1.21475 Z" /><path fill="#ff9900" d="M 155.502 121.805 c -18.8197 14.0395 -46.1641 21.4928 -69.6779 21.4928 c -32.9487 0 -62.6403 -12.3052 -85.0648 -32.7588 c -1.77375 -1.61608 -0.172 -3.81267 1.94575 -2.54058 c 24.2556 14.2115 54.1728 22.8223 85.1221 22.8223 c 20.8801 0 43.8206 -4.38958 64.9264 -13.4052 c 3.14975 -1.44408 5.83725 2.07833 2.74842 4.38958 Z M 163.339 112.793 c -2.40442 -3.12108 -15.9028 -1.50142 -22.0232 -0.7525 c -1.83108 0.22933 -2.11775 -1.38675 -0.45867 -2.6015 c 10.7536 -7.62533 28.4302 -5.43233 30.4906 -2.88817 c 2.06042 2.6015 -0.57333 20.4537 -10.6389 29.0035 c -1.54442 1.32942 -3.0315 0.63425 -2.34708 -1.0965 c 2.28975 -5.719 7.38167 -18.6047 4.97725 -21.6648 Z" /></g></g></svg>
+                  </div>
+                </div>
+              </div>
+              <!-- END -->
+              <div class="overlay" id="id15" onclick="document.getElementById('id15').style.display='none'">
+                <div id="ovtext">AMAZON WEB SERVICE -> %20</div>
+              </div>
             </li>
-            <li class="list-inline-item">
-              <i class="fa fa-linux"></i>
-            </li>
+            <!-- AWS -->                                                
           </ul>
-
-          <!-- Workflow -->
-          <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design
-            </li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging
-            </li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Functional Teams
-            </li>
-          </ul>
-          <!-- Workflow -->
         </div>
       </section>
       <!-- Skills -->
@@ -246,7 +565,8 @@
         <div class="w-100">
           <h2 class="mb-5">Interests</h2>
           <p>Apart from being a developer, I enjoy most of my time being outdoors.I enjoy play guitar, learning new languages, meet new people.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world and Cloud Computing.</p>
+          <p class="mb-3">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the Programming world.</p>  
+          </ul>
         </div>
       </section>
       <!-- Interests -->
@@ -264,46 +584,40 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
-
     <script>  
+      
+      // Skills Bar
+      $(function() {
+      $(".progress").each(function() {
+
+        var value = $(this).attr('data-value');
+        var left = $(this).find('.progress-left .progress-bar');
+        var right = $(this).find('.progress-right .progress-bar');
+
+        if (value > 0) {
+          if (value <= 50) {
+            right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+          } else {
+            right.css('transform', 'rotate(180deg)')
+            left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+          }
+        }
+      })
+
+      function percentageToDegrees(percentage) {
+
+        return percentage / 100 * 360
+
+      }
+
+      });
+      // Skills Bar      
+      
+      // Name Animation 
       setInterval(nameAnimation, 10000); // loop (10 seconds) 
       nameAnimation();
 
-      function clickCounter(){
-        if(typeof(Storage) !== "undefined")
-        {
-          if(localStorage.counter){
-            localStorage.counter=Number(localStorage.counter)+1;
-            return localStorage.counter;
-          }
-          else{
-            localStorage.counter=1;
-            return localStorage.counter;
-          }
-        }
-      }
-
-      // Change background color   
-      function bodyColor(){
-        var bgclr = document.getElementById("colorPicker").value;
-        document.body.style.backgroundColor=bgclr; 
-      }
-
-      // Change navigation bar color  
-      function navColor(){
-        if((document.getElementById("colorPicker").value)=="white")
-        {
-          var wcolors = ["#1a1a1d","#e27D60","#182628", "#379683"];
-          document.getElementById("sideNav").style.backgroundColor=wcolors[clickCounter()%(wcolors.length)];  
-        }
-        else if((document.getElementById("colorPicker").value)=="black"){
-          var dcolors = ["#1a1a1d","#596164","black"];
-          document.getElementById("sideNav").style.backgroundColor=dcolors[clickCounter()%(dcolors.length)];  
-        }
-      }
-      
-      // Text Animation
-      function nameAnimation(){
+       function nameAnimation(){
         const text = document.querySelector(".animateyy");
         const mytext = text.textContent;
         const sptext = mytext.split("");
@@ -330,7 +644,78 @@
           timer=null;
         }
       }
+      // Name Animation 
 
+      // Theme Switcher
+      var checkbox = document.querySelector('input[name=theme]');
+      checkbox.addEventListener('change', function() {
+          if(this.checked) {
+              trans()
+              document.documentElement.setAttribute('data-theme', 'dark')
+          } else {
+              trans()
+              document.documentElement.setAttribute('data-theme', 'light')
+          }
+      })
+
+      function clickCounter(){
+        if(typeof(Storage) !== "undefined")
+        {
+          if(localStorage.counter){
+            localStorage.counter=Number(localStorage.counter)+1;
+            return localStorage.counter;
+          }
+          else{
+            localStorage.counter=1;
+            return localStorage.counter;
+          }
+        }
+      }
+
+      function navColor2() {
+          var c=document.getElementById('switch');
+          // dark
+          if(c.checked) {
+              var dcolors = ["#343a40", "#121212"]; // #1a1a1d"
+              document.getElementById("sideNav").style.backgroundColor=dcolors[clickCounter()%(dcolors.length)]; 
+          } 
+          // light
+          else {
+            var wcolors = ["#343a40", "#182628", "#1f2833", "#116466", "#25274d", "#29648a"];
+            document.getElementById("sideNav").style.backgroundColor=wcolors[clickCounter()%(wcolors.length)];
+          }
+      }
+        
+
+      let trans = () => {
+          document.documentElement.classList.add('transition');
+          window.setTimeout(() => {
+              document.documentElement.classList.remove('transition')
+          }, 1000)
+      }
+      // Theme Switcher
+
+      // DropDown Theme Switcher 
+      function bodyColor(){
+        var bgclr = document.getElementById("colorPicker").value;
+        document.body.style.backgroundColor=bgclr; 
+      }
+
+      // Change navigation bar color  
+      function navColor(){
+        if((document.getElementById("colorPicker").value)=="white")
+        {
+          var wcolors = ["#343a40", "#1a1a1d", "#182628", "#379683"];
+          document.getElementById("sideNav").style.backgroundColor=wcolors[clickCounter()%(wcolors.length)];    
+        }
+        else if((document.getElementById("colorPicker").value)=="#121212"){
+          var dcolors = ["#1a1a1d","#596164","#121212"];
+          document.getElementById("sideNav").style.backgroundColor=dcolors[clickCounter()%(dcolors.length)];    
+        }
+      }
+      // DropDown Theme Switcher   
+    </script>
+  
     </script>
   </body>
 </html>

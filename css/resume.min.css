@@ -3,13 +3,46 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
+ .theme-light {
+    background-color: white;
+  }
+  
+  .theme-light .search-highlighted {
+    background: #f0fff4;
+  }
+  
+  .theme-light .search-hover:hover {
+    background: #f0fff4;
+  }
+  
+  .theme-dark .markdown-body {
+      color: #24292e;
+  }
+  
+  .theme-dark .search-highlighted {
+    background: #2d3748;
+  }
+  
+  .theme-dark .search-hover:hover {
+    background: #2d3748;
+  }
+  
+  .theme-dark {
+    background-color: #0D2438;
+  }
+  
+  .theme-dark .markdown-body {
+      color: #cbd5e0;
+  }
+  
+
 body{
     font-family:Muli,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
     padding-top:54px;
     color:#868e96;
 }
 nav {
-    background-color: #1a1a1d;
+    background-color: #343a40;
     color:rgb(154, 157, 160);
 }
 
@@ -128,6 +161,10 @@ option {
         #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link{
             display:block;
         }
+        #langbtn{
+            margin-left: -60px;
+            background-color: #343a40;
+        }
     }
     section.resume-section{
         padding-top:5rem!important;
@@ -163,3 +200,198 @@ option {
     a:active,a:focus,a:hover{
         color:#824027;
     }
+    #blog:hover{
+        background-color: #cd201f;
+    }
+    #linkedin:hover{
+        background-color: #007bb5;
+    }
+    #github:hover{
+        background-color: #211F1F;
+    }
+    #medium:hover{
+        background-color: #02b875;
+    }
+    #instagram:hover{
+        background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    }
+
+
+/* Theme Switcher */    
+html[data-theme=dark] {
+  --bg: #121212;
+  --bg-panel: #434343;
+  --color-headings: #374151;
+  --color-text: #B5B5B5;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.container {
+  background-color: var(--bg-panel);
+  margin: 5em;
+  padding: 5em;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 80% auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "title switch" "content content";
+}
+.container h1 {
+  margin: 0;
+  color: var(--color-headings);
+}
+.container p {
+  color: var(--color-text);
+  grid-area: content;
+  font-size: 1.1em;
+  line-height: 1.8em;
+  margin-top: 2em;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "\f185";
+
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+    background: var(--color-headings);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+/* Theme Switcher */    
+/* Progress Bar */
+.progress {
+    width: 100px;
+    height: 100px;
+    background: none;
+    position: relative;
+  }
+  
+  .progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .progress>span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .progress .progress-left {
+    left: 0;
+  }
+  
+  .progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 6px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+  }
+  
+  .progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+  }
+  
+  .progress .progress-right {
+    right: 0;
+  }
+  
+  .progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+  }
+  
+  .progress .progress-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* Progress Bar */
+  .overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  #ovtext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
