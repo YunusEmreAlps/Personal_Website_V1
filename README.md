@@ -2,4 +2,4 @@
 
 ## This is Boostrap
 
-You can [Try](https://yunusemrealps.github.io/Personal-Website3/index.html)
+You can [Try](https://yunusemrealps.github.io/Personal_Website_V1/index.html)
